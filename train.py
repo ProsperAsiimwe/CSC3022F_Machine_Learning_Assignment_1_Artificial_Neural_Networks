@@ -1,5 +1,8 @@
-def train_model(model, train_loader, criterion, optimizer, device, epochs=5):
+def train_model(model, train_loader, criterion, optimizer, device, epochs, early_stopping_patience):
     model.train()
+    best_loss = float('inf')
+    patience_counter = 0
+
     for epoch in range(epochs):
         running_loss = 0.0
         for images, labels in train_loader:
@@ -10,4 +13,16 @@ def train_model(model, train_loader, criterion, optimizer, device, epochs=5):
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
-        print(f"Epoch [{epoch+1}/{epochs}], Loss: {running_loss/len(train_loader):.4f}")
+
+        avg_loss = running_loss / len(train_loader)
+        print(f"Epoch [{epoch+1}/{epochs}], Loss: {avg_loss:.4f}")
+
+        # Early stopping logic
+        if avg_loss < best_loss:
+            best_loss = avg_loss
+            patience_counter = 0
+        else:
+            patience_counter += 1
+            if patience_counter >= early_stopping_patience:
+                print("Early stopping triggered.")
+                break

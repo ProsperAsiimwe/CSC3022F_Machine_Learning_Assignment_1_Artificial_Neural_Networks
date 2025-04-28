@@ -23,14 +23,22 @@ def main():
     train_loader = DataLoader(train_data, batch_size=64, shuffle=True)
     test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
+    # Hyper-parameters
+    hidden_layers = 3
+    hidden_nodes = 256
+    activation = 'leaky_relu'
+    dropout = 0.2
+    epochs = 20
+    early_stopping_patience = 3 
+
     # Initialize model, loss, optimizer
-    model = FashionMNISTANN().to(device)
+    model = FashionMNISTANN(hidden_layers=hidden_layers, hidden_nodes=hidden_nodes, activation=activation, dropout=dropout).to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 
     # Train & Evaluate
-    train_model(model, train_loader, criterion, optimizer, device)
-    
+    train_model(model, train_loader, criterion, optimizer, device, epochs, early_stopping_patience)
+
     evaluate_model(model, test_loader, device)
 
     # Interactive loop
