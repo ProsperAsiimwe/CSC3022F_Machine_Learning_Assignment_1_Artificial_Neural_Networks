@@ -24,15 +24,16 @@ def main():
     test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
     # Hyper-parameters
-    hidden_layers = 3
+    hidden_layers = 2
     hidden_nodes = 256
-    activation = 'leaky_relu'
-    dropout = 0.2
+    activation = 'relu'
+    dropout = 0.0
     epochs = 20
     early_stopping_patience = 3 
 
     # Initialize model, loss, optimizer
     model = FashionMNISTANN(hidden_layers=hidden_layers, hidden_nodes=hidden_nodes, activation=activation, dropout=dropout).to(device)
+
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 
