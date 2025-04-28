@@ -1,10 +1,9 @@
-import torch
-
-def train_model(model, train_loader, criterion, optimizer, epochs=5):
+def train_model(model, train_loader, criterion, optimizer, device, epochs=5):
     model.train()
     for epoch in range(epochs):
         running_loss = 0.0
         for images, labels in train_loader:
+            images, labels = images.to(device), labels.to(device)
             optimizer.zero_grad()
             outputs = model(images)
             loss = criterion(outputs, labels)

@@ -12,6 +12,10 @@ from utils import get_class_names
 def main():
     DATA_DIR = "."
 
+    # Device setup
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f"Using device: {device}")
+
     # Load data
     transform = transforms.ToTensor()
     train_data = datasets.FashionMNIST(DATA_DIR, train=True, download=False, transform=transform)
@@ -20,13 +24,14 @@ def main():
     test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
     # Initialize model, loss, optimizer
-    model = FashionMNISTANN()
+    model = FashionMNISTANN().to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 
     # Train & Evaluate
-    train_model(model, train_loader, criterion, optimizer)
-    evaluate_model(model, test_loader)
+    train_model(model, train_loader, criterion, optimizer, device)
+    
+    evaluate_model(model, test_loader, device)
 
     # Interactive loop
     class_names = get_class_names()
@@ -37,7 +42,7 @@ def main():
             print("Exiting...")
             break
         try:
-            image_tensor = preprocess_image(filepath)
+            image_tensor = preprocess_image(filepath).to(device)
             label = predict(model, image_tensor, class_names)
             print(f"Classifier: {label}")
         except Exception as e:

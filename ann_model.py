@@ -1,18 +1,31 @@
 import torch.nn as nn
 
 class FashionMNISTANN(nn.Module):
-    def __init__(self):
+    def __init__(self, layers=[784, 128, 64, 10], activation='relu', dropout=0.0):
         super(FashionMNISTANN, self).__init__()
+        
         self.flatten = nn.Flatten()
-        self.fc1 = nn.Linear(28 * 28, 128)
-        self.relu1 = nn.ReLU()
-        self.fc2 = nn.Linear(128, 64)
-        self.relu2 = nn.ReLU()
-        self.fc3 = nn.Linear(64, 10)
+        self.layers = nn.ModuleList()
+
+        # Map string to activation function
+        activations = {
+            'relu': nn.ReLU(),
+            'leaky_relu': nn.LeakyReLU()
+        }
+        act_fn = activations[activation]
+
+        # Build layers dynamically
+        for i in range(len(layers) - 2):
+            self.layers.append(nn.Linear(layers[i], layers[i+1]))
+            self.layers.append(act_fn)
+            if dropout > 0:
+                self.layers.append(nn.Dropout(dropout))
+        
+        # Final output layer (no activation)
+        self.layers.append(nn.Linear(layers[-2], layers[-1]))
 
     def forward(self, x):
         x = self.flatten(x)
-        x = self.relu1(self.fc1(x))
-        x = self.relu2(self.fc2(x))
-        x = self.fc3(x)
+        for layer in self.layers:
+            x = layer(x)
         return x
