@@ -38,15 +38,14 @@ def main():
 
     # Hyper-parameters
     hidden_layers = 2
-    hidden_nodes = 256
+    hidden_nodes = 128
     activation = 'relu'
     dropout = 0.0
-    epochs = 20
-    early_stopping_patience = 3
     optimizer_choice = 'sgd'
-    momentum = 0.9
     learning_rate = 0.01
     loss_function_choice = 'cross_entropy'
+    epochs = 20
+    early_stopping_patience = 3
 
     # Model setup
     if loss_function_choice == 'nll':
@@ -72,7 +71,7 @@ def main():
 
     # Optimizer
     if optimizer_choice == 'sgd':
-        optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=momentum)
+        optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
     elif optimizer_choice == 'adam':
         optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     else:
