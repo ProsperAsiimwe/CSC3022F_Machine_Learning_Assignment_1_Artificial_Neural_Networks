@@ -67,7 +67,7 @@ def main():
     elif loss_function_choice == 'nll':
         criterion = nn.NLLLoss()
     else:
-        raise ValueError(f"Invalid loss function choice: {loss_function_choice}")
+        criterion = nn.CrossEntropyLoss()
 
     # Optimizer
     if optimizer_choice == 'sgd':
@@ -75,7 +75,7 @@ def main():
     elif optimizer_choice == 'adam':
         optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     else:
-        raise ValueError(f"Invalid optimizer choice: {optimizer_choice}")
+        optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
 
     # Train & Validate
     train_losses, val_losses, val_accuracies = train_model(
