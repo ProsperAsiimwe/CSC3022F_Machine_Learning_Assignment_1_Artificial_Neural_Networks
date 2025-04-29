@@ -8,15 +8,11 @@ from train import train_model
 from evaluate import evaluate_model
 from predict import preprocess_image, predict
 from utils import get_class_names
-from plot_training_curves import plot_training_curves
+# from plot_training_curves import plot_training_curves
 from save_log import save_log_to_txt
 
 def main():
     DATA_DIR = "."
-
-    # Optionally clear logs.txt before starting
-    open("logs.txt", "w").close()
-    print("logs.txt cleared!")
 
     # Device setup
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -38,14 +34,14 @@ def main():
 
     # Hyper-parameters
     hidden_layers = 2
-    hidden_nodes = 128
+    hidden_nodes = 256
     activation = 'relu'
-    dropout = 0.0
-    optimizer_choice = 'sgd'
-    learning_rate = 0.01
-    loss_function_choice = 'cross_entropy'
-    epochs = 20
-    early_stopping_patience = 3
+    dropout = 0.5
+    optimizer_choice = 'adam'
+    learning_rate = 0.0005
+    loss_function_choice = 'nll'
+    epochs = 10
+    early_stopping_patience = 5
 
     # Model setup
     if loss_function_choice == 'nll':
@@ -82,7 +78,7 @@ def main():
         model, train_loader, val_loader, criterion, optimizer, device, epochs, early_stopping_patience
     )
 
-    plot_training_curves(train_losses, val_losses, val_accuracies)
+    # plot_training_curves(train_losses, val_losses, val_accuracies)
 
     # Test Evaluation
     test_accuracy = evaluate_model(model, test_loader, device)
