@@ -11,4 +11,6 @@ def evaluate_model(model, test_loader, device):
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
-    print(f"Test Accuracy: {100 * correct / total:.2f}%")
+    accuracy = 100 * correct / total
+    print(f"Test Accuracy: {accuracy:.2f}%")
+    return accuracy

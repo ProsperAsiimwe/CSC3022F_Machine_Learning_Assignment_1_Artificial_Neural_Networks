@@ -1,0 +1,16 @@
+def save_log_to_txt(config, val_loss, val_accuracy, test_accuracy, log_file="logs.txt"):
+    with open(log_file, "a") as f:
+        f.write("=============================================\n")
+        f.write(f"Hidden Layers: {config['hidden_layers']}\n")
+        f.write(f"Nodes per Layer: {config['hidden_nodes']}\n")
+        f.write(f"Activation: {config['activation']}\n")
+        f.write(f"Dropout: {config['dropout']}\n")
+        f.write(f"Optimizer: {config['optimizer_choice']}\n")
+        f.write(f"Learning Rate: {config['learning_rate']}\n")
+        f.write(f"Loss Function: {config['loss_function_choice']}\n")
+        f.write(f"Epochs: {config['epochs']}\n")
+        f.write(f"Early Stopping Patience: {config['early_stopping_patience']}\n")
+        f.write(f"Final Validation Loss: {val_loss:.4f}\n")
+        f.write(f"Final Validation Accuracy: {val_accuracy:.2f}%\n")
+        f.write(f"Final Test Accuracy: {test_accuracy:.2f}%\n")
+        f.write("=============================================\n\n")
