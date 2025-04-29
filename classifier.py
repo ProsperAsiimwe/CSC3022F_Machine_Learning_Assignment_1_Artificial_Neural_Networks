@@ -28,14 +28,23 @@ def main():
     hidden_nodes = 256
     activation = 'relu'
     dropout = 0.0
-    epochs = 20
+    epochs = 10
     early_stopping_patience = 3 
+    optimizer_choice = 'sgd'
+    momentum = 0.9 #Only for SGD
+    learning_rate = 0.01
 
     # Initialize model, loss, optimizer
     model = FashionMNISTANN(hidden_layers=hidden_layers, hidden_nodes=hidden_nodes, activation=activation, dropout=dropout).to(device)
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+    
+    if optimizer_choice == 'sgd':
+        optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=momentum)
+    elif optimizer_choice == 'adam':
+        optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+    else:
+        optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=momentum)
 
     # Train & Evaluate
     train_model(model, train_loader, criterion, optimizer, device, epochs, early_stopping_patience)
