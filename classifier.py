@@ -24,15 +24,15 @@ def main():
     test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
     # Hyper-parameters
-    hidden_layers = 2
+    hidden_layers = 4
     hidden_nodes = 256
     activation = 'relu'
-    dropout = 0.0
+    dropout = 0.5
     epochs = 10
-    early_stopping_patience = 3 
-    optimizer_choice = 'sgd'
+    early_stopping_patience = 5
+    optimizer_choice = 'adam'
     momentum = 0.9 #Only for SGD
-    learning_rate = 0.01
+    learning_rate = 0.0005
 
     # Initialize model, loss, optimizer
     model = FashionMNISTANN(hidden_layers=hidden_layers, hidden_nodes=hidden_nodes, activation=activation, dropout=dropout).to(device)
