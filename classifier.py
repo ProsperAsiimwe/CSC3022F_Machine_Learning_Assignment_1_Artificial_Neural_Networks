@@ -8,7 +8,7 @@ from train import train_model
 from evaluate import evaluate_model
 from predict import preprocess_image, predict
 from utils import get_class_names
-# from plot_training_curves import plot_training_curves
+from plot_training_curves import plot_training_curves
 from save_log import save_log_to_txt
 
 def main():
@@ -33,14 +33,14 @@ def main():
     test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
     # Hyper-parameters
-    hidden_layers = 2
-    hidden_nodes = 256
+    hidden_layers = 3
+    hidden_nodes = 512
     activation = 'relu'
-    dropout = 0.5
-    optimizer_choice = 'adam'
-    learning_rate = 0.0005
+    dropout = 0.2
+    optimizer_choice = 'sgd'
+    learning_rate = 0.01
     loss_function_choice = 'nll'
-    epochs = 10
+    epochs = 20
     early_stopping_patience = 5
 
     # Model setup
@@ -78,7 +78,7 @@ def main():
         model, train_loader, val_loader, criterion, optimizer, device, epochs, early_stopping_patience
     )
 
-    # plot_training_curves(train_losses, val_losses, val_accuracies)
+    plot_training_curves(train_losses, val_losses, val_accuracies)
 
     # Test Evaluation
     test_accuracy = evaluate_model(model, test_loader, device)
