@@ -2,6 +2,20 @@
 
 This project implements a **feedforward Artificial Neural Network (ANN)** in PyTorch to classify grayscale fashion product images from the **FashionMNIST** dataset. The code allows you to experiment with different hyperparameter settings and observe their impact on validation and test performance.
 
+## Project Structure
+
+| File | Description |
+|------|-------------|
+| `classifier.py` | The **main script** to run the ANN. It trains the model, validates it, saves logs of experiments, and allows **interactive image classification** after training. |
+| `ann_model.py` | Defines the architecture of the ANN. It allows for **customizable hidden layers, activation functions, dropout, and output layers**. |
+| `train.py` | Contains the **training logic**. It performs model training, validation after each epoch, and implements **early stopping** based on validation loss. |
+| `evaluate.py` | Defines a function to **evaluate the trained model on the test set**, reporting accuracy. |
+| `predict.py` | Handles **image preprocessing and prediction** for custom images supplied after training is done. |
+| `utils.py` | Provides utility functions, such as getting the **class names** for FashionMNIST labels. |
+| `plot_training_curves.py` | Reads training logs and **plots training/validation loss and accuracy curves** for visual analysis. |
+| `save_log.py` | Saves each experiment's **configuration and results** into `logs.txt` in a clear, human-readable format. |
+
+
 
 ## How to Run
 
