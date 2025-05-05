@@ -1,12 +1,25 @@
 import torch
 
-def train_model(model, train_loader, val_loader, criterion, optimizer, device, epochs=20, early_stopping_patience=3):
+def train_model(
+    model,
+    train_loader,
+    val_loader,
+    criterion,
+    optimizer,
+    device,
+    epochs=20,
+    early_stopping_patience=3,
+    log_file="logs.txt"
+):
     best_loss = float('inf')
     patience_counter = 0
 
     train_losses = []
     val_losses = []
     val_accuracies = []
+
+    with open(log_file, "a") as f:
+        f.write("===== New Training Run =====\n")
 
     for epoch in range(epochs):
         running_loss = 0.0
@@ -44,7 +57,18 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, device, e
         val_losses.append(avg_val_loss)
         val_accuracies.append(val_accuracy)
 
-        print(f"Epoch [{epoch+1}/{epochs}] - Train Loss: {avg_train_loss:.4f} - Val Loss: {avg_val_loss:.4f} - Val Accuracy: {val_accuracy:.2f}%")
+        log_line = (
+            f"Epoch [{epoch + 1}/{epochs}] - "
+            f"Train Loss: {avg_train_loss:.4f} - "
+            f"Val Loss: {avg_val_loss:.4f} - "
+            f"Val Accuracy: {val_accuracy:.2f}%\n"
+        )
+
+        print(log_line.strip())
+
+        # Write each epoch's log to file
+        with open(log_file, "a") as f:
+            f.write(log_line)
 
         # Early stopping
         if avg_val_loss < best_loss:
@@ -54,6 +78,8 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, device, e
             patience_counter += 1
             if patience_counter >= early_stopping_patience:
                 print("Early stopping triggered.")
+                with open(log_file, "a") as f:
+                    f.write("Early stopping triggered.\n")
                 break
 
     return train_losses, val_losses, val_accuracies

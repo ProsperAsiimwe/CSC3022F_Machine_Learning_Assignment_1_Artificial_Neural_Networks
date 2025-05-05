@@ -90,9 +90,7 @@ def main():
         optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
 
     # Train & Validate
-    train_losses, val_losses, val_accuracies = train_model(
-        model, train_loader, val_loader, criterion, optimizer, device, epochs, early_stopping_patience
-    )
+    train_losses, val_losses, val_accuracies = train_model(model,train_loader,val_loader,criterion,optimizer,device,epochs,early_stopping_patience,log_file="logs.txt")
 
     plot_training_curves(train_losses, val_losses, val_accuracies)
 
