@@ -2,21 +2,6 @@
 
 This project implements a **feedforward Artificial Neural Network (ANN)** in PyTorch to classify grayscale fashion product images from the **FashionMNIST** dataset. The code allows you to experiment with different hyperparameter settings and observe their impact on validation and test performance.
 
-## 📂 Project Structure
-
-.
-├── ann_model.py
-├── classifier.py
-├── evaluate.py
-├── predict.py
-├── train.py
-├── utils.py
-├── plot_training_curves.py
-├── loss_accuracy_plot.png # (auto-generated) Contains generated plots for experiments
-├── logs.txt # Logs of experiments (auto-generated)
-├── requirements.txt
-└── README.md
-
 
 ## How to Run
 
@@ -81,6 +66,8 @@ Once training & evaluation are complete, the script enters an interactive mode:
 Done!
 Please enter a filepath:
 
-Here, you can provide the path to a grayscale image (28x28 pixels) for prediction.
+Here, you can provide the relative path to a grayscale image (28x28 pixels) for prediction.
 
-Example:
+Example from the fashion-jpegs directory:
+
+fashion-jpegs/bag.jpg

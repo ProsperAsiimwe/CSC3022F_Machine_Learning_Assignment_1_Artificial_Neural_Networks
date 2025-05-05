@@ -2,6 +2,8 @@ import torch
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, random_split
 from torch import nn, optim
+import numpy as np
+import random
 
 from ann_model import FashionMNISTANN
 from train import train_model
@@ -11,7 +13,21 @@ from utils import get_class_names
 from plot_training_curves import plot_training_curves
 from save_log import save_log_to_txt
 
+
+def set_seed(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+
 def main():
+    set_seed(42)
+    
     DATA_DIR = "."
 
     # Device setup
