@@ -49,14 +49,14 @@ def main():
     test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
     # Hyper-parameters
-    hidden_layers = 3
-    hidden_nodes = 512
+    hidden_layers = 2
+    hidden_nodes = 256
     activation = 'relu'
-    dropout = 0.2
-    optimizer_choice = 'sgd'
-    learning_rate = 0.01
+    dropout = 0.5
+    optimizer_choice = 'adam'
+    learning_rate = 0.0005
     loss_function_choice = 'nll'
-    epochs = 20
+    epochs = 10
     early_stopping_patience = 5
 
     # Model setup

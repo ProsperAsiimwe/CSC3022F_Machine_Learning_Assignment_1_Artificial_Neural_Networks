@@ -1,0 +1,351 @@
+===== New Training Run =====
+Epoch [1/10] - Train Loss: 0.7309 - Val Loss: 0.4731 - Val Accuracy: 83.43%
+Epoch [2/10] - Train Loss: 0.4442 - Val Loss: 0.4237 - Val Accuracy: 85.05%
+Epoch [3/10] - Train Loss: 0.3986 - Val Loss: 0.3934 - Val Accuracy: 85.95%
+Epoch [4/10] - Train Loss: 0.3711 - Val Loss: 0.3727 - Val Accuracy: 86.62%
+Epoch [5/10] - Train Loss: 0.3490 - Val Loss: 0.3711 - Val Accuracy: 86.39%
+Epoch [6/10] - Train Loss: 0.3307 - Val Loss: 0.3696 - Val Accuracy: 86.76%
+Epoch [7/10] - Train Loss: 0.3162 - Val Loss: 0.3569 - Val Accuracy: 87.10%
+Epoch [8/10] - Train Loss: 0.3054 - Val Loss: 0.3439 - Val Accuracy: 87.79%
+Epoch [9/10] - Train Loss: 0.2948 - Val Loss: 0.3423 - Val Accuracy: 87.57%
+Epoch [10/10] - Train Loss: 0.2856 - Val Loss: 0.3266 - Val Accuracy: 88.02%
+=============================================
+Hidden Layers: 2
+Nodes per Layer: 128
+Activation: relu
+Dropout: 0.0
+Optimizer: sgd
+Learning Rate: 0.01
+Loss Function: cross_entropy
+Epochs: 10
+Early Stopping Patience: 3
+Final Validation Loss: 0.3266
+Final Validation Accuracy: 88.02%
+Final Test Accuracy: 87.24%
+=============================================
+
+===== New Training Run =====
+Epoch [1/20] - Train Loss: 1.5937 - Val Loss: 0.9457 - Val Accuracy: 65.43%
+Epoch [2/20] - Train Loss: 0.8511 - Val Loss: 0.7219 - Val Accuracy: 72.66%
+Epoch [3/20] - Train Loss: 0.7120 - Val Loss: 0.6313 - Val Accuracy: 77.43%
+Epoch [4/20] - Train Loss: 0.6361 - Val Loss: 0.5758 - Val Accuracy: 79.77%
+Epoch [5/20] - Train Loss: 0.5820 - Val Loss: 0.5328 - Val Accuracy: 81.90%
+Epoch [6/20] - Train Loss: 0.5475 - Val Loss: 0.5106 - Val Accuracy: 82.52%
+Epoch [7/20] - Train Loss: 0.5235 - Val Loss: 0.4875 - Val Accuracy: 83.15%
+Epoch [8/20] - Train Loss: 0.5022 - Val Loss: 0.4701 - Val Accuracy: 83.60%
+Epoch [9/20] - Train Loss: 0.4872 - Val Loss: 0.4616 - Val Accuracy: 83.74%
+Epoch [10/20] - Train Loss: 0.4715 - Val Loss: 0.4471 - Val Accuracy: 84.15%
+Epoch [11/20] - Train Loss: 0.4583 - Val Loss: 0.4370 - Val Accuracy: 84.45%
+Epoch [12/20] - Train Loss: 0.4478 - Val Loss: 0.4297 - Val Accuracy: 84.51%
+Epoch [13/20] - Train Loss: 0.4367 - Val Loss: 0.4213 - Val Accuracy: 84.88%
+Epoch [14/20] - Train Loss: 0.4277 - Val Loss: 0.4161 - Val Accuracy: 85.26%
+Epoch [15/20] - Train Loss: 0.4203 - Val Loss: 0.4079 - Val Accuracy: 85.53%
+Epoch [16/20] - Train Loss: 0.4127 - Val Loss: 0.3991 - Val Accuracy: 85.56%
+Epoch [17/20] - Train Loss: 0.4066 - Val Loss: 0.3975 - Val Accuracy: 85.84%
+Epoch [18/20] - Train Loss: 0.3996 - Val Loss: 0.3891 - Val Accuracy: 86.02%
+Epoch [19/20] - Train Loss: 0.3928 - Val Loss: 0.3860 - Val Accuracy: 86.20%
+Epoch [20/20] - Train Loss: 0.3886 - Val Loss: 0.3828 - Val Accuracy: 86.33%
+=============================================
+Hidden Layers: 2
+Nodes per Layer: 256
+Activation: relu
+Dropout: 0.2
+Optimizer: sgd
+Learning Rate: 0.001
+Loss Function: cross_entropy
+Epochs: 20
+Early Stopping Patience: 3
+Final Validation Loss: 0.3828
+Final Validation Accuracy: 86.33%
+Final Test Accuracy: 85.24%
+=============================================
+
+===== New Training Run =====
+Epoch [1/10] - Train Loss: 0.8150 - Val Loss: 0.4718 - Val Accuracy: 82.97%
+Epoch [2/10] - Train Loss: 0.5098 - Val Loss: 0.4142 - Val Accuracy: 84.64%
+Epoch [3/10] - Train Loss: 0.4583 - Val Loss: 0.4066 - Val Accuracy: 85.37%
+Epoch [4/10] - Train Loss: 0.4367 - Val Loss: 0.3709 - Val Accuracy: 86.38%
+Epoch [5/10] - Train Loss: 0.4163 - Val Loss: 0.3626 - Val Accuracy: 86.81%
+Epoch [6/10] - Train Loss: 0.4028 - Val Loss: 0.3548 - Val Accuracy: 86.97%
+Epoch [7/10] - Train Loss: 0.3856 - Val Loss: 0.3536 - Val Accuracy: 87.06%
+Epoch [8/10] - Train Loss: 0.3767 - Val Loss: 0.3468 - Val Accuracy: 87.38%
+Epoch [9/10] - Train Loss: 0.3688 - Val Loss: 0.3449 - Val Accuracy: 87.63%
+Epoch [10/10] - Train Loss: 0.3642 - Val Loss: 0.3375 - Val Accuracy: 87.82%
+=============================================
+Hidden Layers: 3
+Nodes per Layer: 256
+Activation: leaky_relu
+Dropout: 0.5
+Optimizer: adam
+Learning Rate: 0.0005
+Loss Function: cross_entropy
+Epochs: 10
+Early Stopping Patience: 5
+Final Validation Loss: 0.3375
+Final Validation Accuracy: 87.82%
+Final Test Accuracy: 87.10%
+=============================================
+
+===== New Training Run =====
+Epoch [1/20] - Train Loss: 0.8590 - Val Loss: 0.5149 - Val Accuracy: 81.99%
+Epoch [2/20] - Train Loss: 0.4678 - Val Loss: 0.4271 - Val Accuracy: 84.14%
+Epoch [3/20] - Train Loss: 0.4095 - Val Loss: 0.3739 - Val Accuracy: 86.34%
+Epoch [4/20] - Train Loss: 0.3849 - Val Loss: 0.3613 - Val Accuracy: 87.03%
+Epoch [5/20] - Train Loss: 0.3619 - Val Loss: 0.3427 - Val Accuracy: 87.33%
+Epoch [6/20] - Train Loss: 0.3440 - Val Loss: 0.3633 - Val Accuracy: 87.07%
+Epoch [7/20] - Train Loss: 0.3317 - Val Loss: 0.3638 - Val Accuracy: 86.89%
+Epoch [8/20] - Train Loss: 0.3217 - Val Loss: 0.3425 - Val Accuracy: 87.29%
+Epoch [9/20] - Train Loss: 0.3088 - Val Loss: 0.3243 - Val Accuracy: 88.24%
+Epoch [10/20] - Train Loss: 0.3009 - Val Loss: 0.3269 - Val Accuracy: 88.08%
+Epoch [11/20] - Train Loss: 0.2917 - Val Loss: 0.3443 - Val Accuracy: 87.19%
+Epoch [12/20] - Train Loss: 0.2815 - Val Loss: 0.3089 - Val Accuracy: 88.66%
+Epoch [13/20] - Train Loss: 0.2766 - Val Loss: 0.3066 - Val Accuracy: 88.67%
+Epoch [14/20] - Train Loss: 0.2707 - Val Loss: 0.3032 - Val Accuracy: 89.11%
+Epoch [15/20] - Train Loss: 0.2620 - Val Loss: 0.3093 - Val Accuracy: 89.05%
+Epoch [16/20] - Train Loss: 0.2553 - Val Loss: 0.3117 - Val Accuracy: 88.58%
+Epoch [17/20] - Train Loss: 0.2537 - Val Loss: 0.3302 - Val Accuracy: 88.15%
+Epoch [18/20] - Train Loss: 0.2435 - Val Loss: 0.3127 - Val Accuracy: 89.08%
+Epoch [19/20] - Train Loss: 0.2418 - Val Loss: 0.3008 - Val Accuracy: 89.38%
+Epoch [20/20] - Train Loss: 0.2392 - Val Loss: 0.3128 - Val Accuracy: 88.97%
+=============================================
+Hidden Layers: 3
+Nodes per Layer: 512
+Activation: relu
+Dropout: 0.2
+Optimizer: sgd
+Learning Rate: 0.01
+Loss Function: cross_entropy
+Epochs: 20
+Early Stopping Patience: 5
+Final Validation Loss: 0.3128
+Final Validation Accuracy: 88.97%
+Final Test Accuracy: 88.51%
+=============================================
+
+===== New Training Run =====
+Epoch [1/20] - Train Loss: 0.5560 - Val Loss: 0.4340 - Val Accuracy: 84.38%
+Epoch [2/20] - Train Loss: 0.3877 - Val Loss: 0.3894 - Val Accuracy: 86.52%
+Epoch [3/20] - Train Loss: 0.3490 - Val Loss: 0.3735 - Val Accuracy: 86.61%
+Epoch [4/20] - Train Loss: 0.3212 - Val Loss: 0.3416 - Val Accuracy: 87.97%
+Epoch [5/20] - Train Loss: 0.3006 - Val Loss: 0.3121 - Val Accuracy: 88.62%
+Epoch [6/20] - Train Loss: 0.2850 - Val Loss: 0.3735 - Val Accuracy: 86.62%
+Epoch [7/20] - Train Loss: 0.2726 - Val Loss: 0.3229 - Val Accuracy: 88.56%
+Epoch [8/20] - Train Loss: 0.2620 - Val Loss: 0.3257 - Val Accuracy: 88.28%
+Early stopping triggered.
+=============================================
+Hidden Layers: 4
+Nodes per Layer: 512
+Activation: leaky_relu
+Dropout: 0.0
+Optimizer: adam
+Learning Rate: 0.001
+Loss Function: cross_entropy
+Epochs: 20
+Early Stopping Patience: 3
+Final Validation Loss: 0.3257
+Final Validation Accuracy: 88.28%
+Final Test Accuracy: 87.53%
+=============================================
+
+===== New Training Run =====
+Epoch [1/10] - Train Loss: 0.7466 - Val Loss: 0.4786 - Val Accuracy: 82.75%
+Epoch [2/10] - Train Loss: 0.4863 - Val Loss: 0.4213 - Val Accuracy: 85.08%
+Epoch [3/10] - Train Loss: 0.4412 - Val Loss: 0.3955 - Val Accuracy: 86.10%
+Epoch [4/10] - Train Loss: 0.4134 - Val Loss: 0.3637 - Val Accuracy: 86.51%
+Epoch [5/10] - Train Loss: 0.3989 - Val Loss: 0.3685 - Val Accuracy: 86.81%
+Epoch [6/10] - Train Loss: 0.3812 - Val Loss: 0.3514 - Val Accuracy: 87.18%
+Epoch [7/10] - Train Loss: 0.3746 - Val Loss: 0.3478 - Val Accuracy: 87.49%
+Epoch [8/10] - Train Loss: 0.3612 - Val Loss: 0.3325 - Val Accuracy: 88.24%
+Epoch [9/10] - Train Loss: 0.3548 - Val Loss: 0.3394 - Val Accuracy: 87.27%
+Epoch [10/10] - Train Loss: 0.3470 - Val Loss: 0.3237 - Val Accuracy: 88.60%
+=============================================
+Hidden Layers: 2
+Nodes per Layer: 256
+Activation: relu
+Dropout: 0.5
+Optimizer: adam
+Learning Rate: 0.0005
+Loss Function: cross_entropy
+Epochs: 10
+Early Stopping Patience: 5
+Final Validation Loss: 0.3237
+Final Validation Accuracy: 88.60%
+Final Test Accuracy: 87.51%
+=============================================
+
+===== New Training Run =====
+Epoch [1/10] - Train Loss: 0.7309 - Val Loss: 0.4731 - Val Accuracy: 83.43%
+Epoch [2/10] - Train Loss: 0.4442 - Val Loss: 0.4237 - Val Accuracy: 85.05%
+Epoch [3/10] - Train Loss: 0.3986 - Val Loss: 0.3934 - Val Accuracy: 85.95%
+Epoch [4/10] - Train Loss: 0.3711 - Val Loss: 0.3727 - Val Accuracy: 86.62%
+Epoch [5/10] - Train Loss: 0.3490 - Val Loss: 0.3711 - Val Accuracy: 86.39%
+Epoch [6/10] - Train Loss: 0.3307 - Val Loss: 0.3696 - Val Accuracy: 86.76%
+Epoch [7/10] - Train Loss: 0.3162 - Val Loss: 0.3569 - Val Accuracy: 87.10%
+Epoch [8/10] - Train Loss: 0.3054 - Val Loss: 0.3439 - Val Accuracy: 87.79%
+Epoch [9/10] - Train Loss: 0.2948 - Val Loss: 0.3423 - Val Accuracy: 87.57%
+Epoch [10/10] - Train Loss: 0.2856 - Val Loss: 0.3266 - Val Accuracy: 88.02%
+=============================================
+Hidden Layers: 2
+Nodes per Layer: 128
+Activation: relu
+Dropout: 0.0
+Optimizer: sgd
+Learning Rate: 0.01
+Loss Function: nll
+Epochs: 10
+Early Stopping Patience: 3
+Final Validation Loss: 0.3266
+Final Validation Accuracy: 88.02%
+Final Test Accuracy: 87.24%
+=============================================
+
+===== New Training Run =====
+Epoch [1/20] - Train Loss: 1.5937 - Val Loss: 0.9457 - Val Accuracy: 65.43%
+Epoch [2/20] - Train Loss: 0.8511 - Val Loss: 0.7219 - Val Accuracy: 72.66%
+Epoch [3/20] - Train Loss: 0.7120 - Val Loss: 0.6313 - Val Accuracy: 77.43%
+Epoch [4/20] - Train Loss: 0.6361 - Val Loss: 0.5758 - Val Accuracy: 79.77%
+Epoch [5/20] - Train Loss: 0.5820 - Val Loss: 0.5328 - Val Accuracy: 81.90%
+Epoch [6/20] - Train Loss: 0.5475 - Val Loss: 0.5106 - Val Accuracy: 82.52%
+Epoch [7/20] - Train Loss: 0.5235 - Val Loss: 0.4875 - Val Accuracy: 83.15%
+Epoch [8/20] - Train Loss: 0.5022 - Val Loss: 0.4701 - Val Accuracy: 83.60%
+Epoch [9/20] - Train Loss: 0.4872 - Val Loss: 0.4616 - Val Accuracy: 83.74%
+Epoch [10/20] - Train Loss: 0.4715 - Val Loss: 0.4471 - Val Accuracy: 84.15%
+Epoch [11/20] - Train Loss: 0.4583 - Val Loss: 0.4370 - Val Accuracy: 84.45%
+Epoch [12/20] - Train Loss: 0.4478 - Val Loss: 0.4297 - Val Accuracy: 84.51%
+Epoch [13/20] - Train Loss: 0.4367 - Val Loss: 0.4213 - Val Accuracy: 84.88%
+Epoch [14/20] - Train Loss: 0.4277 - Val Loss: 0.4161 - Val Accuracy: 85.26%
+Epoch [15/20] - Train Loss: 0.4203 - Val Loss: 0.4079 - Val Accuracy: 85.53%
+Epoch [16/20] - Train Loss: 0.4127 - Val Loss: 0.3991 - Val Accuracy: 85.56%
+Epoch [17/20] - Train Loss: 0.4066 - Val Loss: 0.3975 - Val Accuracy: 85.84%
+Epoch [18/20] - Train Loss: 0.3996 - Val Loss: 0.3891 - Val Accuracy: 86.02%
+Epoch [19/20] - Train Loss: 0.3928 - Val Loss: 0.3860 - Val Accuracy: 86.20%
+Epoch [20/20] - Train Loss: 0.3886 - Val Loss: 0.3828 - Val Accuracy: 86.33%
+=============================================
+Hidden Layers: 2
+Nodes per Layer: 256
+Activation: relu
+Dropout: 0.2
+Optimizer: sgd
+Learning Rate: 0.001
+Loss Function: nll
+Epochs: 20
+Early Stopping Patience: 3
+Final Validation Loss: 0.3828
+Final Validation Accuracy: 86.33%
+Final Test Accuracy: 85.24%
+=============================================
+
+===== New Training Run =====
+Epoch [1/10] - Train Loss: 0.8150 - Val Loss: 0.4718 - Val Accuracy: 82.97%
+Epoch [2/10] - Train Loss: 0.5098 - Val Loss: 0.4142 - Val Accuracy: 84.64%
+Epoch [3/10] - Train Loss: 0.4583 - Val Loss: 0.4066 - Val Accuracy: 85.37%
+Epoch [4/10] - Train Loss: 0.4367 - Val Loss: 0.3709 - Val Accuracy: 86.38%
+Epoch [5/10] - Train Loss: 0.4163 - Val Loss: 0.3626 - Val Accuracy: 86.81%
+Epoch [6/10] - Train Loss: 0.4028 - Val Loss: 0.3548 - Val Accuracy: 86.97%
+Epoch [7/10] - Train Loss: 0.3856 - Val Loss: 0.3536 - Val Accuracy: 87.06%
+Epoch [8/10] - Train Loss: 0.3767 - Val Loss: 0.3468 - Val Accuracy: 87.38%
+Epoch [9/10] - Train Loss: 0.3688 - Val Loss: 0.3449 - Val Accuracy: 87.63%
+Epoch [10/10] - Train Loss: 0.3642 - Val Loss: 0.3375 - Val Accuracy: 87.82%
+=============================================
+Hidden Layers: 3
+Nodes per Layer: 256
+Activation: leaky_relu
+Dropout: 0.5
+Optimizer: adam
+Learning Rate: 0.0005
+Loss Function: nll
+Epochs: 10
+Early Stopping Patience: 5
+Final Validation Loss: 0.3375
+Final Validation Accuracy: 87.82%
+Final Test Accuracy: 87.10%
+=============================================
+
+
+===== New Training Run =====
+Epoch [1/20] - Train Loss: 0.8590 - Val Loss: 0.5149 - Val Accuracy: 81.99%
+Epoch [2/20] - Train Loss: 0.4678 - Val Loss: 0.4271 - Val Accuracy: 84.14%
+Epoch [3/20] - Train Loss: 0.4095 - Val Loss: 0.3739 - Val Accuracy: 86.34%
+Epoch [4/20] - Train Loss: 0.3849 - Val Loss: 0.3613 - Val Accuracy: 87.03%
+Epoch [5/20] - Train Loss: 0.3619 - Val Loss: 0.3427 - Val Accuracy: 87.33%
+Epoch [6/20] - Train Loss: 0.3440 - Val Loss: 0.3633 - Val Accuracy: 87.07%
+Epoch [7/20] - Train Loss: 0.3317 - Val Loss: 0.3638 - Val Accuracy: 86.89%
+Epoch [8/20] - Train Loss: 0.3217 - Val Loss: 0.3425 - Val Accuracy: 87.29%
+Epoch [9/20] - Train Loss: 0.3088 - Val Loss: 0.3243 - Val Accuracy: 88.24%
+Epoch [10/20] - Train Loss: 0.3009 - Val Loss: 0.3269 - Val Accuracy: 88.08%
+Epoch [11/20] - Train Loss: 0.2917 - Val Loss: 0.3443 - Val Accuracy: 87.19%
+Epoch [12/20] - Train Loss: 0.2815 - Val Loss: 0.3089 - Val Accuracy: 88.66%
+Epoch [13/20] - Train Loss: 0.2766 - Val Loss: 0.3066 - Val Accuracy: 88.67%
+Epoch [14/20] - Train Loss: 0.2707 - Val Loss: 0.3032 - Val Accuracy: 89.11%
+Epoch [15/20] - Train Loss: 0.2620 - Val Loss: 0.3093 - Val Accuracy: 89.05%
+Epoch [16/20] - Train Loss: 0.2553 - Val Loss: 0.3117 - Val Accuracy: 88.58%
+Epoch [17/20] - Train Loss: 0.2537 - Val Loss: 0.3302 - Val Accuracy: 88.15%
+Epoch [18/20] - Train Loss: 0.2435 - Val Loss: 0.3127 - Val Accuracy: 89.08%
+Epoch [19/20] - Train Loss: 0.2418 - Val Loss: 0.3008 - Val Accuracy: 89.38%
+Epoch [20/20] - Train Loss: 0.2392 - Val Loss: 0.3128 - Val Accuracy: 88.97%
+=============================================
+Hidden Layers: 3
+Nodes per Layer: 512
+Activation: relu
+Dropout: 0.2
+Optimizer: sgd
+Learning Rate: 0.01
+Loss Function: nll
+Epochs: 20
+Early Stopping Patience: 5
+Final Validation Loss: 0.3128
+Final Validation Accuracy: 88.97%
+Final Test Accuracy: 88.51%
+=============================================
+
+===== New Training Run =====
+Epoch [1/20] - Train Loss: 0.5560 - Val Loss: 0.4340 - Val Accuracy: 84.38%
+Epoch [2/20] - Train Loss: 0.3877 - Val Loss: 0.3894 - Val Accuracy: 86.52%
+Epoch [3/20] - Train Loss: 0.3490 - Val Loss: 0.3735 - Val Accuracy: 86.61%
+Epoch [4/20] - Train Loss: 0.3212 - Val Loss: 0.3416 - Val Accuracy: 87.97%
+Epoch [5/20] - Train Loss: 0.3006 - Val Loss: 0.3121 - Val Accuracy: 88.62%
+Epoch [6/20] - Train Loss: 0.2850 - Val Loss: 0.3735 - Val Accuracy: 86.62%
+Epoch [7/20] - Train Loss: 0.2726 - Val Loss: 0.3229 - Val Accuracy: 88.56%
+Epoch [8/20] - Train Loss: 0.2620 - Val Loss: 0.3257 - Val Accuracy: 88.28%
+Early stopping triggered.
+=============================================
+Hidden Layers: 4
+Nodes per Layer: 512
+Activation: leaky_relu
+Dropout: 0.0
+Optimizer: adam
+Learning Rate: 0.001
+Loss Function: nll
+Epochs: 20
+Early Stopping Patience: 3
+Final Validation Loss: 0.3257
+Final Validation Accuracy: 88.28%
+Final Test Accuracy: 87.53%
+=============================================
+
+===== New Training Run =====
+Epoch [1/10] - Train Loss: 0.7466 - Val Loss: 0.4786 - Val Accuracy: 82.75%
+Epoch [2/10] - Train Loss: 0.4863 - Val Loss: 0.4213 - Val Accuracy: 85.08%
+Epoch [3/10] - Train Loss: 0.4412 - Val Loss: 0.3955 - Val Accuracy: 86.10%
+Epoch [4/10] - Train Loss: 0.4134 - Val Loss: 0.3637 - Val Accuracy: 86.51%
+Epoch [5/10] - Train Loss: 0.3989 - Val Loss: 0.3685 - Val Accuracy: 86.81%
+Epoch [6/10] - Train Loss: 0.3812 - Val Loss: 0.3514 - Val Accuracy: 87.18%
+Epoch [7/10] - Train Loss: 0.3746 - Val Loss: 0.3478 - Val Accuracy: 87.49%
+Epoch [8/10] - Train Loss: 0.3612 - Val Loss: 0.3325 - Val Accuracy: 88.24%
+Epoch [9/10] - Train Loss: 0.3548 - Val Loss: 0.3394 - Val Accuracy: 87.27%
+Epoch [10/10] - Train Loss: 0.3470 - Val Loss: 0.3237 - Val Accuracy: 88.60%
+=============================================
+Hidden Layers: 2
+Nodes per Layer: 256
+Activation: relu
+Dropout: 0.5
+Optimizer: adam
+Learning Rate: 0.0005
+Loss Function: nll
+Epochs: 10
+Early Stopping Patience: 5
+Final Validation Loss: 0.3237
+Final Validation Accuracy: 88.60%
+Final Test Accuracy: 87.51%
+=============================================
+
